@@ -1,0 +1,400 @@
+/* Main container */
+.dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #0f172a, #1e3a8a, #0f172a);
+  padding: 1.5rem;
+}
+
+.dashboard-wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+/* Header section */
+.header-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #60a5fa;
+}
+
+.header-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: white;
+}
+
+.header-subtitle {
+  color: #bfdbfe;
+}
+
+.scan-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.scan-button:hover {
+  background-color: #2563eb;
+}
+
+.scan-button:disabled {
+  background-color: #6b7280;
+  cursor: not-allowed;
+}
+
+/* Statistics cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+}
+
+.stat-value {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: white;
+}
+
+.stat-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Main content grid */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .main-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.content-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Device list */
+.device-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 24rem;
+  overflow-y: auto;
+}
+
+.empty-state {
+  color: #bfdbfe;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.device-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.device-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.device-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.device-name {
+  font-weight: 600;
+  color: white;
+}
+
+.device-info {
+  font-size: 0.875rem;
+  color: #bfdbfe;
+}
+
+.risk-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid;
+}
+
+.risk-critical {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border-color: #fca5a5;
+}
+
+.risk-high {
+  background-color: #ffedd5;
+  color: #9a3412;
+  border-color: #fed7aa;
+}
+
+.risk-medium {
+  background-color: #fef3c7;
+  color: #92400e;
+  border-color: #fde047;
+}
+
+.risk-low {
+  background-color: #dcfce7;
+  color: #166534;
+  border-color: #86efac;
+}
+
+.device-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: #bfdbfe;
+}
+
+.device-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.icon-secure {
+  color: #4ade80;
+}
+
+.icon-unsecure {
+  color: #f87171;
+}
+
+/* Vulnerability section */
+.vulnerability-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 24rem;
+  overflow-y: auto;
+}
+
+.device-summary {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.device-summary h3 {
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.summary-details {
+  font-size: 0.875rem;
+  color: #bfdbfe;
+}
+
+.summary-details p {
+  margin: 0.25rem 0;
+}
+
+.vulnerability-item {
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.vuln-critical {
+  color: #dc2626;
+  background-color: #fef2f2;
+}
+
+.vuln-high {
+  color: #ea580c;
+  background-color: #fff7ed;
+}
+
+.vuln-medium {
+  color: #d97706;
+  background-color: #fffbeb;
+}
+
+.vuln-low {
+  color: #16a34a;
+  background-color: #f0fdf4;
+}
+
+.vuln-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.vuln-title {
+  font-weight: 600;
+}
+
+.severity-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.vuln-description {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.vuln-cve {
+  font-size: 0.75rem;
+  font-family: monospace;
+  margin-bottom: 0.5rem;
+}
+
+.vuln-remediation {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid currentColor;
+  opacity: 0.2;
+}
+
+.remediation-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.remediation-text {
+  font-size: 0.75rem;
+}
+
+/* Network traffic table */
+.traffic-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.traffic-table-container {
+  overflow-x: auto;
+}
+
+.traffic-table {
+  width: 100%;
+  font-size: 0.875rem;
+}
+
+.traffic-table thead tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.traffic-table th {
+  text-align: left;
+  color: #bfdbfe;
+  font-weight: 600;
+  padding: 0.5rem;
+}
+
+.traffic-table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s;
+}
+
+.traffic-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.traffic-table td {
+  padding: 0.5rem;
+}
+
+.traffic-timestamp,
+.traffic-device,
+.traffic-bytes {
+  color: white;
+}
+
+.traffic-protocol {
+  color: #bfdbfe;
+}
